@@ -1,0 +1,52 @@
+h1 {
+    text-align: center;
+    margin-top: 2%;
+    font-weight: 800;
+    font-size: 40px;
+    color: rgb(57, 3, 124);
+}
+
+form {
+    padding: 1%;
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 25%;
+    background-color: rgb(222, 219, 214);
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.form-label {
+    margin-left: 26%;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(73, 70, 70);
+
+}
+
+input {
+    width: 50%;
+    margin: auto;
+    border-radius: 0%;
+    padding: 12px 30px;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+span {
+    margin-left: 26%;
+    font-size: 13px;
+}
+
+.btn {
+    width: 30%;
+    margin-left: 33%;
+    margin-top: 10px;
+    margin-bottom: 3%;
+    padding: 12px 20px;
+    font-weight: 600;
+    border-radius: 0;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+input .ng-invalid .ng-touched {
+    border: 1px solid red;
+}

@@ -1,0 +1,35 @@
+<h1>REACTIVE FORM WITH VALIDATION</h1>
+
+
+<form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+  <div class="mb-3 mt-3">
+    <label for="text" class="form-label">Full Name :</label>
+    <input type="text" class="form-control" id="fullname" placeholder="Enter your name" name="fulltname" formControlName="fullname">
+  <span style="color: red;" *ngIf="fullname && fullname.invalid && fullname.touched">Name is missing !!</span>
+</div>
+
+
+  <div class="mb-3 mt-3">
+    <label for="number" class="form-label">Mobile number :</label>
+    <input type="number" class="form-control" id="number" placeholder="Phone number" name="number" formControlName="number">
+  <span style="color: blue;" *ngIf="number && number.invalid && number.touched">It must be 10 digit !!</span>
+</div>
+
+
+  <div class="mb-3 mt-3">
+    <label for="email" class="form-label">Email :</label>
+    <input type="email" class="form-control" id="email" placeholder="john@example.com" name="email" formControlName="email">
+  <span style="color: red;" *ngIf="email && email.invalid && email.touched">Email must be a valid email address</span>
+  </div>
+
+
+  <div class="mb-3">
+    <label for="pwd" class="form-label">Create Password :</label>
+    <input type="password" class="form-control" id="pwd" placeholder="Enter new password" name="pswd"
+      formControlName="password"> 
+  <span style="color: blue;" *ngIf="password && password.invalid && password.touched">Too weak !!</span>
+  </div>
+
+
+  <button type="submit" class="btn btn-primary" [disabled]="reactiveForm.invalid">SUBMIT</button>
+</form>
